@@ -1,1 +1,1 @@
-# bachelor_thesis
+# 卒業論文
