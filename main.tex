@@ -1,0 +1,52 @@
+%-*- coding: utf-8 -*-
+
+\documentclass[12pt]{jbachelor}
+
+\input{macro}
+%\setcounter{topnumber}{8}
+%\renewcommand{\topfraction}{1.0}
+%\renewcommand{\bottomfraction}{0.0}
+%\renewcommand{\textfraction}{0.0}
+
+%%%%%%%%%%%%%%%%%%%% タイトル %%%%%%%%%%%%%%%%%%%%
+
+\title{不完全情報ゲームにおける\\モンテカルロ法の評価指標に関する研究}
+\department{コンピュータサイエンスコース}
+\author{海津　純平}
+\date{2015年3月2日}
+
+%%%%%%%%%%%%%%%%%%%% 目次等作成 %%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\newpage
+\pagenumbering{arabic}
+
+%%%%%%%%%%%%%%%%%%%% 論文本体 %%%%%%%%%%%%%%%%%%%%
+
+\chapter{はじめに}
+\input{docs/intro}
+\chapter{準備}
+\input{docs/preparation}
+\chapter{既存手法}
+\input{docs/existing}
+\chapter{提案手法}
+\input{docs/proposal}
+\chapter{実験}
+\input{docs/experiment}
+\chapter{まとめ}
+\input{docs/summary}
+
+%%%%%%%%%%%%%%%%%%%% 参考文献 %%%%%%%%%%%%%%%%%%%%
+
+\bibliographystyle{jplain}
+\bibliography{ref}
+
+\chapter*{謝辞}
+%\input{docs/acknowledgment}
+\input{docs/ac}
+
+\end{document}

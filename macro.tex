@@ -1,0 +1,73 @@
+%-*- coding: utf-8 -*-
+
+% ToDo や，各自のコメント行の表示のon/offは，次の命令で切り替える．
+\newif\ifdraft \drafttrue   %% 作業用
+%\newif\ifdraft\draftfalse  %% 提出用
+
+%%%%%%%%%%%%%%%%%%%% コメント用 %%%%%%%%%%%%%%%%%%
+
+\ifdraft
+% 自分の好きな色を選んで下さい
+\newcommand{\shinocom}[1]{\textcolor{magenta}{[(篠原)#1]}}
+\newcommand{\naricom}[1]{\textcolor{red}{[(成澤)#1]}}
+\newcommand{\usercom}[1]{\textcolor{blue}{[(user)#1]}}
+\newcommand{\todo}[1]{{\color{red}{[ToDo: #1]}}}
+\else
+\newcommand{\shinocom}[1]{}
+\newcommand{\naricom}[1]{}
+\newcommand{\usercom}[1]{}
+\newcommand{\todo}[1]{}
+\fi
+
+%%%%%%%%%%%%%%%%%%%% パッケージ %%%%%%%%%%%%%%%%%%
+
+\usepackage[dvipdfmx]{color}                      % 色の使用
+\usepackage[dvipdfmx]{graphicx}                % 図表
+\usepackage{theorem}                           % 【必須】証明のフォントを変える
+\usepackage{amssymb}                           % 特殊文字が使用可能となる
+\usepackage{amsmath}                           % math中の\text
+% \usepackage{comment}                           % 複数行コメントアウト
+% \usepackage{multirow}                          % 表の縦結合
+% \usepackage{subfigure}                         % 図の中にサブ(a)(b)とか作るやつ
+% \usepackage{colortbl}                          % 表の網掛け
+% \usepackage{graphicx}                          % 文字列の縦圧縮
+\usepackage{url}                               % URLを使うとき
+\usepackage[ruled, linesnumbered]{algorithm2e} % アルゴリズム4.0
+
+\usepackage{okumacro} %ルビ
+%\usepackage{pxrubrica} %ルビ
+
+%%%%%%%%%%%%%%%%%%%% マクロ定義 %%%%%%%%%%%%%%%%%%
+
+%QED : 全角文字なのが気になる人は自分で調べてね
+\newcommand{\qed}{\hfill \rmfamily{□}} 
+% argmaxを追加
+\newcommand{\argmax}{\mathop{\rm arg~max}\limits}
+% \newcommand{}{}
+% \newcommand{}[1]{#1}
+
+
+%%%%%%%%%%%%%%%%%%% 定理環境定義 %%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%% 基本的にここから下はいじらない%%%%%%%%%%%%ここから
+
+\theoremstyle{plain}
+\theorembodyfont{\normalfont}
+\setlength\theorempreskipamount{14pt}
+\setlength\theorempostskipamount{14pt}
+
+\newtheorem{definition}{定義}
+\newtheorem{theorem}{定理}
+\newtheorem{lemma}{補題}
+\newtheorem{example}{例}
+\newtheorem{proof}{証明}
+\newtheorem{proposition}{命題}
+\newtheorem{observation}{観察}
+\newtheorem{problem}{問題}
+\newtheorem{corollary}{系}
+\newtheorem{remark}{注}
+\newtheorem{fact}{事実}
+\renewcommand{\theproof}{}
+
+%%%%%%%%%%%% 基本的にここはいじらない%%%%%%%%%%%%ここまで
+
